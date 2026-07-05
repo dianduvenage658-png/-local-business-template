@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,41 +10,31 @@ body {
   text-align: center;
 }
 
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #111827;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* HERO */
 header {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: linear-gradient(135deg, #00ffcc, #0066ff);
   color: black;
+  animation: fadeIn 1s ease-in;
 }
 
-.hero {
-  padding: 50px 20px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 40px;
-}
-
-.card {
-  background: #141b2d;
-  padding: 20px;
-  width: 250px;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  background: #1c2540;
-}
-
-.about, .contact {
-  padding: 50px 20px;
-}
-
+/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 15px;
@@ -51,8 +45,59 @@ header {
   text-decoration: none;
 }
 
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 40px;
+}
+
+.card {
+  background: #141b2d;
+  padding: 20px;
+  width: 200px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ABOUT */
+.about {
+  padding: 50px 20px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 50px 20px;
+}
+
+.quote {
+  background: #1c2540;
+  margin: 10px auto;
+  padding: 15px;
+  width: 70%;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 50px 20px;
+}
+
+/* FOOTER */
 footer {
   padding: 20px;
-  font-size: 12px;
   opacity: 0.6;
+  font-size: 12px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
